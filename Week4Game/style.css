@@ -1,0 +1,54 @@
+.header{
+    padding: 60px;
+        text-align: center;
+        background: #1abc9c;
+        color: white;
+        font-size: 30px;
+       
+    }
+
+    *,*::before , *::after {
+
+        box-sizing: border-box;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    :root{
+        --hue-neutral: 200
+        --hue-wrong:0;
+        --hue-correct:145
+
+    }
+
+    body{
+        --hue: var(var(--hue-neutral))
+        padding: 0;
+        margin: 0;
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        background-color: orange;
+        
+    }
+
+    body.correct{
+        --hue: var(var(--hue-correct))
+    }
+
+    body.wrong{
+        --hue:var(--hue-wrong)
+    }
+
+    .container{
+        width: 800px;
+        margin-top: 800px;
+        max-width: 80%;
+        background-color: azure;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 0 10px 2px;
+    }
+
+  
+       
