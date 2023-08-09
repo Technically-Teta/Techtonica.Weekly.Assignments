@@ -16,18 +16,19 @@
 // need event to trigger page // a form that takes in their name and email 
 document.getElementById("play").addEventListener('click',(event) =>{
 event.preventDefault();
-// 1b.Create variables for the inputs
-// username
-const username = document.getElementById('user-name').value
 
-})
+const username = document.getElementById('user-name').value
 
 const userForm = document.getElementById('uformid')
 if(username !=" ") {
-   uformid.innerText = `WELCOME TO THE GAME ${username}`
+   userForm.innerText = `WELCOME TO THE GAME ${username}`
 }else {
-uformid.innerText = "Don't forget to enter your name!"
+userForm.innerText = "Don't forget to enter your name!"
 }
+
+// Display the question container
+    const questionContainer = document.getElementById('question-container');
+    questionContainer.classList.remove('hide');
 
 // make the form appear on button click
 function myFunction() {
@@ -38,7 +39,7 @@ function myFunction() {
             click.style.display = "none";
         }
     }
-
+})
 
 
 
