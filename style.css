@@ -86,7 +86,7 @@ body.wrong {
     margin-top: 0px;
     margin-bottom: 0px;
     height: 100px;
-    font-size: larger;
+    font-size: larger;  
 }
 
 
@@ -107,11 +107,17 @@ body.wrong {
 #question-container {
     justify-content: center;
     align-items: center;
-    margin-bottom: 5px;
+    margin-top:  5px;
     margin-left: 0px;
-    height: 100px;
+    height: 150px;
     margin-bottom: 40px;
 
+}
+
+
+.controls{
+    justify-content: center;
+  
 }
 
 .btn-grid {
@@ -157,10 +163,10 @@ body.wrong {
     background-color: hsl(var(--bg));
     color: var(--dark);
     margin-right: 400px;
+    margin-left:  -550px;
     border: 0;
     border-radius: 0.5em;
-    padding: 1em;
-
+    padding: 1em;  
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
