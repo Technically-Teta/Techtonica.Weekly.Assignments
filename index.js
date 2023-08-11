@@ -22,14 +22,19 @@ document.getElementById("userNameForm").addEventListener("submit", (event) => {
 
 
 // Btn starts game *** check error
-playButton.addEventListener('click', startGame);
+//playButton.addEventListener('click', startGame);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const playButton = document.getElementById("play");
+  playButton.addEventListener("click", startGame);
+});
+
 nextButton.addEventListener('click', ()=>{
   currentQuestionIndex++
   setNextQuestion()
 })
 
 function startGame(){
-   console.log('did it start?');
    playButton.classList.add('hide');
    shuffledQuestions =questions.sort(() => Math.random() - .5 );
    currentQuestionIndex = 0;
@@ -73,7 +78,7 @@ function selectAnswer(e){
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
   })
-  if(shuffleQuestions.length > currentQuestionIndex +1){
+  if(shuffledQuestions.length > currentQuestionIndex +1){
      nextButton.classList.remove('hide')
   }else{
     playButton.innerText = 'Restart'
@@ -98,25 +103,7 @@ function clearStatusClass(element){
 }
 
 
-// // Display the question container
-//     const questionContainer = document.getElementById('question-container');
-//     questionContainer.classList.remove('hide');
 
-// // make the form appear on button click
-// function myFunction() {
-//         let click = document.getElementById("container");
-//         if (click.style.display === "none") {
-//             click.style.display = "block";
-//         } else {
-//             click.style.display = "none";
-//         }
-//     }
-// })
-
-
-
-// steps
-//1. write out all the questions + answers
 const questions = [
   {
     question: 'What spearheading Actress is spearheading the current SAG actors strike?',
